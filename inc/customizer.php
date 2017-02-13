@@ -14,10 +14,6 @@ function waxom_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->add_section( 'waxom_hero_section' , array(
-		'title'		=>	__('Waxom Hero Section', 'waxom' ),
-		'priority'	=>	30,
-	) );
 }
 add_action( 'customize_register', 'waxom_customize_register' );
 

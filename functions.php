@@ -2,8 +2,6 @@
 /**
  * waxom functions and definitions.
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package waxom
  */
 
@@ -41,12 +39,6 @@ function waxom_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'waxom_custom_background_args', array(
-	// 	'default-color' => '000000',
-	// 	'default-image' => '',
-	// ) ) );
 }
 endif;
 
@@ -109,3 +101,5 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/function-admin.php';
 
 require get_template_directory() . '/inc/jetpack.php';
+
+require get_template_directory() . '/inc/custom_post_type.php';

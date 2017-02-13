@@ -487,6 +487,7 @@ CONTENT - EXCELLENT FOR MOBILE DEVICES
 }
 .mobile-device-text {
 	position: relative;
+	padding-bottom: 30px;
 }
 @media screen and (max-width: 550px) {
 	.mobile-device-text {

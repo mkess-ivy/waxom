@@ -15,59 +15,122 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+	<?php 
+		// Section 2 - Services
+		$service1_icon = get_field('service1_icon');
+		$service1_title = get_field('service1_title');
+		$service1_text = get_field('service1_text');
+		$service2_icon = get_field('service2_icon');
+		$service2_title = get_field('service2_title');
+		$service2_text = get_field('service2_text');
+		$service3_icon = get_field('service3_icon');
+		$service3_title = get_field('service3_title');
+		$service3_text = get_field('service3_text');
+		$service4_icon = get_field('service4_icon');
+		$service4_title = get_field('service4_title');
+		$service4_text = get_field('service4_text');
+		// Section 3 - Welcome
+		$section3_title = get_field('section3_title');
+		$section3_text = get_field('section3_text');
+		$section3_img = get_field('section3_img');
+		// Section 4 - CTA
+		$cta_title = get_field('cta_title');
+		$cta_text = get_field('cta_text');
+		$cta_btn_text = get_field('cta_btn_text');
+		// Section 5 - Latest Posts
+		$waxom_latest_title = get_field('waxom_latest_title');
+		$waxom_latest_text = get_field('waxom_latest_text');
+		// Section 6 - Video
+		$waxom_video_icon = get_field('waxom_video_icon');
+		$waxom_video_title = get_field('waxom_video_title');
+		$waxom_video_text = get_field('waxom_video_text');
+		$waxom_video_duration = get_field('waxom_video_duration');
+		// Section 7 - Mobile Devices
+		$waxom_device_img = get_field('waxom_device_img');
+		$waxom_device_title = get_field('waxom_device_title');
+		$waxom_device_text = get_field('waxom_device_text');
+		$waxom_device_bullet1_text = get_field('waxom_device_bullet1_text');
+		$waxom_device_bullet2_text = get_field('waxom_device_bullet2_text');
+		$waxom_device_bullet3_text = get_field('waxom_device_bullet3_text');
+		$waxom_device_bullet4_text = get_field('waxom_device_bullet4_text');
+		// Section 8 - Facts
+		$waxom_facts1_img = get_field('waxom_facts1_img');
+		$waxom_facts1_number = get_field('waxom_facts1_number');
+		$waxom_facts1_title = get_field('waxom_facts1_title');
+		$waxom_facts2_img = get_field('waxom_facts2_img');
+		$waxom_facts2_number = get_field('waxom_facts2_number');
+		$waxom_facts2_title = get_field('waxom_facts2_title');
+		$waxom_facts3_img = get_field('waxom_facts3_img');
+		$waxom_facts3_number = get_field('waxom_facts3_number');
+		$waxom_facts3_title = get_field('waxom_facts3_title');
+		$waxom_facts4_img = get_field('waxom_facts4_img');
+		$waxom_facts4_number = get_field('waxom_facts4_number');
+		$waxom_facts4_title = get_field('waxom_facts4_title');
+		$waxom_facts5_img = get_field('waxom_facts5_img');
+		$waxom_facts5_number = get_field('waxom_facts5_number');
+		$waxom_facts5_title = get_field('waxom_facts5_title');
+		// Section 10 - Clients & Partners
+		$client1_img = get_field('client1_img');
+		$client2_img = get_field('client2_img');
+		$client3_img = get_field('client3_img');
+		$client4_img = get_field('client4_img');
+	?>
 		<main id="main" class="site-main" role="main">
-			<!-- Services -->
+			<!-- Section 2 - Services -->
 		    <div class="inner clearfix">
 		        <div class="services col3">
-		            <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-pencil.png" /></div>
-		            <h3>Web &amp; App Design</h3>
-		            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+		            <div class="icon">
+		            	<img class="icon-img" src="<?php echo $service1_icon['url']; ?>" />
+		            </div>
+		            <h3><?php echo $service1_title ?></h3>
+		            <p><?php echo $service1_text ?></p>
 		            <span class="border">&nbsp;</span>
 		        </div>
 		        <div class="services col3">
-		            <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-development.png" /></div>
-		            <h3>Development</h3>
-		            <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+		            <div class="icon"><img class="icon-img" src="<?php echo $service2_icon['url']; ?>" /></div>
+		            <h3><?php echo $service2_title ?></h3>
+		            <p><?php echo $service2_text ?></p>
 		            <span class="border">&nbsp;</span>
 		        </div>
 		        <div class="services col3">
-		            <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-customization.png" /></div>
-		            <h3>Customization</h3>
-		            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+		            <div class="icon"><img class="icon-img" src="<?php echo $service3_icon['url']; ?>" /></div>
+		            <h3><?php echo $service3_title ?></h3>
+		            <p><?php echo $service3_text ?></p>
 		            <span class="border">&nbsp;</span>
 		        </div>
 		        <div class="services col3">
-		            <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-marketing.png" /></div>
-		            <h3>Marketing</h3>
-		            <p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+		            <div class="icon"><img class="icon-img" src="<?php echo $service4_icon['url']; ?>" /></div>
+		            <h3><?php echo $service4_title ?></h3>
+		            <p><?php echo $service4_text ?></p>
 		            <span class="border">&nbsp;</span>
 		        </div>
-		    </div> <!-- #Services -->
+		    </div>
 
-		    <!-- Realization of Ideas -->
+		    <!-- Section 3 - Welcome -->
 		    <div class="full section-bg-primary">
 		        <div class="inner spacer-30">
-		            <h3 class="section-header">Waxom is Realization of your Ideas.</h3>
-		            <p class="paragraph">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-		            <img src="<?php echo get_template_directory_uri(); ?>/img/browsers.png" />
+		            <h3 class="section-header"><?php echo $section3_title ?></h3>
+		            <p class="paragraph"><?php echo $section3_text ?></p>
+		            <img src="<?php echo $section3_img['url']; ?>" />
 		        </div>
-		    </div><!-- .container inner -->
-		    <!-- Banner -->
+		    </div>
+		    <!-- Section 4 - CTA -->
 		    <div class="banner full clearfix">
 		        <div class="inner">
 		            <div class="left-element">
-		                <h3 class="banner-heading">Waxom Multipurpose Wordpress&nbsp;Theme</h3>
-		                <p>Don't forget to rate the template. Thanks so much!</p>
+		                <h3 class="banner-heading"><?php echo $cta_title ?></h3>
+		                <p><?php echo $cta_text ?></p>
 		            </div>
 		            <div class="right-element banner-cta">
-		                <a class="btn">Purchase Now</a>
+		                <a class="btn"><?php echo $cta_btn_text ?></a>
 		            </div>
 		        </div>
 		    </div> <!-- .Banner -->
-		    <!-- Our Latest Projects -->
+		    <!-- Section 5 - Latest Posts -->
+		    <!-- Custom Post Type Here -->
 		    <div class="inner spacer-100">
-		        <h3 class="section-header">Our Latest Projects.</h3>
-		        <p class="paragraph projects-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+		        <h3 class="section-header"><?php echo $waxom_latest_title ?></h3>
+		        <p class="paragraph projects-text"><?php echo $waxom_latest_text ?></p>
 		        <!-- Skipping navigation -->
 		        <div class="projects clearfix">
 		            <div class="col4">
@@ -120,60 +183,60 @@ get_header(); ?>
 		            </div>
 		        </div>
 		        <div class="btn btn-centered btn-centered2"><a href="#">Load More</a></div>
-		    </div><!-- #Our Latest Projects -->
-		    <!-- Video Hero -->
+		    </div>
+		    <!-- Section 6 - Video -->
 		    <div class="hero video-hero full">
-		        <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-play-video.png" /></div>
-		        <h4>Waxom Video Presentation</h4>
-		        <p class="paragraph video-paragraph">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-		        <span class="video-time">03:29</span>
-		    </div><!-- Video Hero -->
-		    <!-- Extra 1_Excellent for Mobile Devices -->
+		        <div class="icon"><img class="icon-img" src="<?php echo $waxom_video_icon['url']; ?>" /></div>
+		        <h4><?php echo $waxom_video_title ?></h4>
+		        <p class="paragraph video-paragraph"><?php echo $waxom_video_text ?></p>
+		        <span class="video-time"><?php echo $waxom_video_duration ?></span>
+		    </div>
+		    <!-- Section 7 - Mobile Devices -->
 		    <div class="inner devices clearfix">
 		        <div class="col4 mobile-device-img">
-		            <img src="<?php echo get_template_directory_uri(); ?>/img/iphone-hand.png" width="200" />
+		            <img src="<?php echo $waxom_device_img['url']; ?>" width="200" />
 		        </div>
 		        <div class="col8 mobile-device-text">
-		            <h3 class="section-header">Excellent for Mobile Devices</h3>
-		            <p class="paragraph excellent-paragraph">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+		            <h3 class="section-header"><?php echo $waxom_device_title ?></h3>
+		            <p class="paragraph excellent-paragraph"><?php echo $waxom_device_text ?></p>
 		            <ul class="another-list mobile-devices-list">
-		                <li>Nam liber tempor cum soluta nobis eleifend option;</li>
-		                <li>Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
-		                <li>Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
-		                <li>Investigationes demonstraverunt lectores</li>
+		                <li><?php echo $waxom_device_bullet1_text ?></li>
+		                <li><?php echo $waxom_device_bullet2_text ?></li>
+		                <li><?php echo $waxom_device_bullet3_text ?></li>
+		                <li><?php echo $waxom_device_bullet4_text ?></li>
 		            </ul>
 		        </div>
-		    </div><!-- !Excellent Mobile Devices -->
-		    <!-- Banner -->
+		    </div>
+		    <!-- Section 8 - Facts -->
 		    <div class="banner full clearfix">
 		        <ul class="another-list rtb-list">
 		            <li>
-		                <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-clients.png" /></div>
-		                <div class="number">3587</div>
-		                <p>satisfied clients</p>
+		                <div class="icon"><img class="icon-img" src="<?php echo $waxom_facts1_img['url']; ?>" /></div>
+		                <div class="number"><?php echo $waxom_facts1_number ?></div>
+		                <p><?php echo $waxom_facts1_title ?></p>
 		            </li>
 		            <li>
-		                <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-coffee.png" /></div>
-		                <div class="number">207</div>
-		                <p>cups of coffee</p>
+		                <div class="icon"><img class="icon-img" src="<?php echo $waxom_facts2_img['url']; ?>" /></div>
+		                <div class="number"><?php echo $waxom_facts2_number ?></div>
+		                <p><?php echo $waxom_facts2_title ?></p>
 		            </li>
 		            <li>
-		                <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-posts.png" /></div>
-		                <div class="number">2500</div>
-		                <p>blog posts</p>
+		                <div class="icon"><img class="icon-img" src="<?php echo $waxom_facts3_img['url']; ?>" /></div>
+		                <div class="number"><?php echo $waxom_facts3_number ?></div>
+		                <p><?php echo $waxom_facts3_title ?></p>
 		            </li>
 		            <li>
-		                <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-heart.png" /></div>
-		                <div class="number">873</div>
-		                <p>likes</p>
+		                <div class="icon"><img class="icon-img" src="<?php echo $waxom_facts4_img['url']; ?>" /></div>
+		                <div class="number"><?php echo $waxom_facts4_number ?></div>
+		                <p><?php echo $waxom_facts4_title ?></p>
 		            </li>
 		            <li>
-		                <div class="icon"><img class="icon-img" src="<?php echo get_template_directory_uri(); ?>/img/icon-something.png" /></div>
-		                <div class="number">900</div>
-		                <p>we launched</p>
+		                <div class="icon"><img class="icon-img" src="<?php echo $waxom_facts5_img['url']; ?>" /></div>
+		                <div class="number"><?php echo $waxom_facts5_number ?></div>
+		                <p><?php echo $waxom_facts5_title ?></p>
 		            </li>
 		        </ul>
-		    </div> <!-- .Banner -->
+		    </div>
 		    <!-- Recent Posts -->
 		    <div class="recent inner spacer-100 clearfix">
 		        <h3 class="section-header">Recent Posts.</h3>
@@ -205,7 +268,7 @@ get_header(); ?>
 		    <!-- Clients -->
 		    <div class="hero client-hero full">
 		        <ul class="another-list partner-list">
-		            <li><a href="#"><img class="partner-img" src="<?php echo get_template_directory_uri(); ?>/img/partner-1.png" alt="" /></a></li>
+		            <li><a href="#"><img class="partner-img" src="<?php echo $client1_img['url']; ?>" alt="" /></a></li>
 		            <li><a href="#"><img class="partner-img" src="<?php echo get_template_directory_uri(); ?>/img/partner-2.png" alt="" /></a></li>
 		            <li><a href="#"><img class="partner-img" src="<?php echo get_template_directory_uri(); ?>/img/partner-3.png" alt="" /></a></li>
 		            <li><a href="#"><img class="partner-img" src="<?php echo get_template_directory_uri(); ?>/img/partner-4.png" alt="" /></a></li>
